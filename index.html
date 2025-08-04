@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pastel To-Do & Calendar (Date-based)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="app-container">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>To-Do Calendar</h2>
+    </div>
+    <div class="calendar-header">
+      <div class="cal-btns">
+        <button id="prev-week-btn" class="calendar-nav">&lt;&lt; Prev</button>
+        <button class="today-btn" id="today-btn">Today</button>
+        <button id="next-week-btn" class="calendar-nav">Next &gt;&gt;</button>
+      </div>
+      <div><strong id="calendar-month-label"></strong> / <span id="calendar-week-label"></span></div>
+    </div>
+    <div class="calendar">
+      <div class="calendar-days" id="calendar-days"></div>
+    </div>
+  </aside>
+  <main class="main-content">
+    <section class="tasks-for-day">
+      <h2>Tasks for <span id="main-date-label"></span></h2>
+      <ul id="todo-on-date" class="todo-list"></ul>
+      <button id="add-task-btn" class="add-task-main-btn">+ Add Task</button>
+    </section>
+  </main>
+</div>
+<div id="add-task-modal" class="modal hidden">
+  <form id="task-form">
+    <h3>Add Task</h3>
+    <input type="text" id="task-title" placeholder="Task name" required />
+    <input type="time" id="task-time" />
+    <button type="submit">Add</button>
+    <button type="button" id="close-modal">Cancel</button>
+  </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
